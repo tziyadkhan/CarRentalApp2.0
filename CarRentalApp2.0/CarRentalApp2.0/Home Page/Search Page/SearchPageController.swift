@@ -17,7 +17,6 @@ class SearchPageController: UIViewController {
     var searching = false
     var searchedCar = [CarModel]()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         helper.getFilePath()
@@ -69,6 +68,7 @@ extension SearchPageController: UICollectionViewDelegate, UICollectionViewDataSo
         }
         return cell
     }
+    
 }
 
 //MARK: Functions(searchLayerConfig, Fetching)

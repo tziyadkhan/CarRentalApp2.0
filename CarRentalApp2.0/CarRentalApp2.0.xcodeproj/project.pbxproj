@@ -20,6 +20,8 @@
 		900FB6EB2AEF914500B4BAD3 /* CarListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 900FB6E92AEF914500B4BAD3 /* CarListCell.xib */; };
 		900FB6EE2AEF9D8D00B4BAD3 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 900FB6ED2AEF9D8D00B4BAD3 /* Lottie */; };
 		900FB6F02AEF9DD100B4BAD3 /* underConstruction.json in Resources */ = {isa = PBXBuildFile; fileRef = 900FB6EF2AEF9DD100B4BAD3 /* underConstruction.json */; };
+		900FB6FC2AEFD38200B4BAD3 /* CarCategoryHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900FB6FB2AEFD38200B4BAD3 /* CarCategoryHeader.swift */; };
+		901269FA2AEFDCDA004E8F8A /* CarCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901269F92AEFDCDA004E8F8A /* CarCategoryCell.swift */; };
 		901B39BD2AEF814600279706 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901B39BC2AEF814600279706 /* AppDelegate.swift */; };
 		901B39BF2AEF814600279706 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901B39BE2AEF814600279706 /* SceneDelegate.swift */; };
 		901B39C42AEF814600279706 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 901B39C22AEF814600279706 /* Main.storyboard */; };
@@ -38,6 +40,8 @@
 		900FB6E82AEF914500B4BAD3 /* CarListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListCell.swift; sourceTree = "<group>"; };
 		900FB6E92AEF914500B4BAD3 /* CarListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarListCell.xib; sourceTree = "<group>"; };
 		900FB6EF2AEF9DD100B4BAD3 /* underConstruction.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = underConstruction.json; sourceTree = "<group>"; };
+		900FB6FB2AEFD38200B4BAD3 /* CarCategoryHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCategoryHeader.swift; sourceTree = "<group>"; };
+		901269F92AEFDCDA004E8F8A /* CarCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCategoryCell.swift; sourceTree = "<group>"; };
 		901B39B92AEF814600279706 /* CarRentalApp2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarRentalApp2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		901B39BC2AEF814600279706 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		901B39BE2AEF814600279706 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +141,15 @@
 			path = CarList;
 			sourceTree = "<group>";
 		};
+		900FB6F62AEFD34800B4BAD3 /* CarCategoryReusableCell */ = {
+			isa = PBXGroup;
+			children = (
+				900FB6FB2AEFD38200B4BAD3 /* CarCategoryHeader.swift */,
+				901269F92AEFDCDA004E8F8A /* CarCategoryCell.swift */,
+			);
+			path = CarCategoryReusableCell;
+			sourceTree = "<group>";
+		};
 		901B39B02AEF814600279706 = {
 			isa = PBXGroup;
 			children = (
@@ -156,11 +169,12 @@
 		901B39BB2AEF814600279706 /* CarRentalApp2.0 */ = {
 			isa = PBXGroup;
 			children = (
-				900FB6E62AEF912300B4BAD3 /* XIB Cells */,
 				900FB6D82AEF847D00B4BAD3 /* Login Page */,
 				900FB6CC2AEF840100B4BAD3 /* Home Page */,
 				900FB6D92AEF848700B4BAD3 /* Data Manager */,
 				900FB6DA2AEF8B5300B4BAD3 /* Tab Bar Controller */,
+				900FB6F62AEFD34800B4BAD3 /* CarCategoryReusableCell */,
+				900FB6E62AEF912300B4BAD3 /* XIB Cells */,
 				901B39BC2AEF814600279706 /* AppDelegate.swift */,
 				901B39BE2AEF814600279706 /* SceneDelegate.swift */,
 				901B39C22AEF814600279706 /* Main.storyboard */,
@@ -260,9 +274,11 @@
 				900FB6E52AEF90B000B4BAD3 /* RealmFunctions.swift in Sources */,
 				900FB6CB2AEF83FC00B4BAD3 /* LoginPageController.swift in Sources */,
 				901B39BD2AEF814600279706 /* AppDelegate.swift in Sources */,
+				900FB6FC2AEFD38200B4BAD3 /* CarCategoryHeader.swift in Sources */,
 				900FB6D22AEF843A00B4BAD3 /* SearchPageController.swift in Sources */,
 				900FB6DC2AEF8B7800B4BAD3 /* TabBarController.swift in Sources */,
 				901B39BF2AEF814600279706 /* SceneDelegate.swift in Sources */,
+				901269FA2AEFDCDA004E8F8A /* CarCategoryCell.swift in Sources */,
 				900FB6D02AEF842C00B4BAD3 /* VehiclePageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,6 +6,7 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -132,7 +133,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ATK-77-YEa">
-                                <rect key="frame" x="0.0" y="229" width="430" height="620"/>
+                                <rect key="frame" x="38" y="217" width="354" height="632"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="30" minimumInteritemSpacing="30" id="CCo-4a-5pt">
                                     <size key="itemSize" width="360" height="360"/>
@@ -152,11 +153,11 @@
                         <constraints>
                             <constraint firstItem="bPr-8X-uS8" firstAttribute="width" secondItem="t9H-Dq-ltP" secondAttribute="width" multiplier="0.823256" id="8KF-tJ-7Uc"/>
                             <constraint firstItem="bPr-8X-uS8" firstAttribute="top" secondItem="jbv-Wp-qK5" secondAttribute="top" constant="24" id="GiH-MC-Yjp"/>
-                            <constraint firstItem="ATK-77-YEa" firstAttribute="bottom" secondItem="jbv-Wp-qK5" secondAttribute="bottom" id="HZT-9V-Ths"/>
-                            <constraint firstItem="ATK-77-YEa" firstAttribute="top" secondItem="bPr-8X-uS8" secondAttribute="bottom" constant="42" id="MVU-Z5-5rZ"/>
-                            <constraint firstItem="ATK-77-YEa" firstAttribute="trailing" secondItem="jbv-Wp-qK5" secondAttribute="trailing" id="Nkb-jk-iuI"/>
-                            <constraint firstItem="ATK-77-YEa" firstAttribute="leading" secondItem="jbv-Wp-qK5" secondAttribute="leading" id="arX-K8-VUj"/>
+                            <constraint firstItem="ATK-77-YEa" firstAttribute="bottom" secondItem="jbv-Wp-qK5" secondAttribute="bottom" id="dJz-fO-aRs"/>
                             <constraint firstItem="bPr-8X-uS8" firstAttribute="centerX" secondItem="jbv-Wp-qK5" secondAttribute="centerX" id="h6c-36-9e9"/>
+                            <constraint firstItem="ATK-77-YEa" firstAttribute="trailing" secondItem="bPr-8X-uS8" secondAttribute="trailing" id="hd5-3o-80O"/>
+                            <constraint firstItem="ATK-77-YEa" firstAttribute="top" secondItem="bPr-8X-uS8" secondAttribute="bottom" constant="30" id="hxy-yi-OKq"/>
+                            <constraint firstItem="ATK-77-YEa" firstAttribute="leading" secondItem="bPr-8X-uS8" secondAttribute="leading" id="jgw-LG-N5j"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="ZTs-G7-9Gg"/>
@@ -212,14 +213,152 @@
                     <view key="view" contentMode="scaleToFill" id="kci-Vf-NQo">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ioo-oZ-Mdr">
+                                <rect key="frame" x="38" y="127" width="354" height="60"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search for a car" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sne-82-AoQ">
+                                        <rect key="frame" x="12" y="15" width="334" height="34"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="search:" destination="bku-ma-VGO" eventType="editingChanged" id="Pbp-cM-uiT"/>
+                                            <action selector="searchButton:" destination="SBz-YY-Wnu" eventType="editingChanged" id="UV2-GN-jCo"/>
+                                        </connections>
+                                    </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="tWE-n8-hT5">
+                                        <rect key="frame" x="311" y="17.666666666666657" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="8yS-jG-nmV"/>
+                                            <constraint firstAttribute="width" constant="25" id="MSH-63-qsd"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="1A2-ZC-tSY"/>
+                                    <constraint firstItem="Sne-82-AoQ" firstAttribute="trailing" secondItem="ioo-oZ-Mdr" secondAttribute="trailingMargin" id="MsT-uN-OLL"/>
+                                    <constraint firstAttribute="width" constant="354" id="QXd-gc-hYx"/>
+                                    <constraint firstAttribute="trailing" secondItem="tWE-n8-hT5" secondAttribute="trailing" constant="18" id="W6T-AP-heK"/>
+                                    <constraint firstItem="Sne-82-AoQ" firstAttribute="top" secondItem="ioo-oZ-Mdr" secondAttribute="top" constant="15" id="bs7-5a-u7m"/>
+                                    <constraint firstItem="tWE-n8-hT5" firstAttribute="centerY" secondItem="ioo-oZ-Mdr" secondAttribute="centerY" id="gV2-ox-s4q"/>
+                                    <constraint firstAttribute="bottom" secondItem="Sne-82-AoQ" secondAttribute="bottom" constant="11" id="v03-4y-ykT"/>
+                                    <constraint firstItem="Sne-82-AoQ" firstAttribute="leading" secondItem="ioo-oZ-Mdr" secondAttribute="leading" constant="12" id="wqi-Dd-Qp4"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="p2h-Ev-Q0M">
+                                <rect key="frame" x="0.0" y="217" width="430" height="632"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="15" id="qn3-Oa-ic0">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="50" height="179"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CarCategoryHeader" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="CarCategoryHeader" id="hTt-VU-kbb" customClass="CarCategoryHeader" customModule="CarRentalApp2_0" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="430" height="179"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KBl-kl-KHA">
+                                            <rect key="frame" x="8" y="8" width="414" height="163"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="4I7-kS-vrJ">
+                                                <size key="itemSize" width="139" height="149"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <cells>
+                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CarCategoryCell" reuseIdentifier="CarCategoryCell" id="edh-1o-jS8" customClass="CarCategoryCell" customModule="CarRentalApp2_0" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="7" width="139" height="149"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ZHI-VK-76C">
+                                                        <rect key="frame" x="0.0" y="0.0" width="139" height="149"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2XG-st-oFB">
+                                                                <rect key="frame" x="21" y="2" width="115" height="145"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Standard" translatesAutoresizingMaskIntoConstraints="NO" id="CNJ-19-dnh">
+                                                                        <rect key="frame" x="-36" y="0.0" width="146" height="93"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Standard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e7v-yp-s65">
+                                                                        <rect key="frame" x="0.0" y="93" width="115" height="21"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="56" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SM3-TH-mXU">
+                                                                        <rect key="frame" x="-2" y="116" width="115" height="21"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </view>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </collectionViewCellContentView>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <size key="customSize" width="139" height="149"/>
+                                                    <connections>
+                                                        <outlet property="background" destination="2XG-st-oFB" id="dTf-AQ-DkM"/>
+                                                        <outlet property="carCategoryCount" destination="SM3-TH-mXU" id="vvP-8r-bBt"/>
+                                                        <outlet property="carCategoryImage" destination="CNJ-19-dnh" id="8LI-Oz-Tto"/>
+                                                        <outlet property="carCategoryName" destination="e7v-yp-s65" id="a1V-jK-eIU"/>
+                                                    </connections>
+                                                </collectionViewCell>
+                                            </cells>
+                                            <connections>
+                                                <outlet property="dataSource" destination="hTt-VU-kbb" id="0VV-TU-066"/>
+                                                <outlet property="delegate" destination="hTt-VU-kbb" id="Lu8-2G-efg"/>
+                                            </connections>
+                                        </collectionView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="KBl-kl-KHA" firstAttribute="leading" secondItem="hTt-VU-kbb" secondAttribute="leadingMargin" id="6Hg-pS-896"/>
+                                        <constraint firstItem="KBl-kl-KHA" firstAttribute="top" secondItem="hTt-VU-kbb" secondAttribute="topMargin" id="Lg2-Jd-gAy"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="KBl-kl-KHA" secondAttribute="trailing" id="TVw-bc-qUw"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="KBl-kl-KHA" secondAttribute="bottom" id="jEF-5m-TV6"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="carCategoryCollection" destination="KBl-kl-KHA" id="T7V-as-Sgl"/>
+                                    </connections>
+                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="SBz-YY-Wnu" id="t2T-7k-x2y"/>
+                                    <outlet property="delegate" destination="SBz-YY-Wnu" id="4UX-wx-6dO"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ffQ-CP-30S"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="p2h-Ev-Q0M" firstAttribute="top" secondItem="ioo-oZ-Mdr" secondAttribute="bottom" constant="30" id="1H5-RW-cGV"/>
+                            <constraint firstItem="ioo-oZ-Mdr" firstAttribute="top" secondItem="ffQ-CP-30S" secondAttribute="top" constant="24" id="4QU-49-2Oh"/>
+                            <constraint firstItem="ffQ-CP-30S" firstAttribute="trailing" secondItem="p2h-Ev-Q0M" secondAttribute="trailing" id="5qB-22-txU"/>
+                            <constraint firstItem="ioo-oZ-Mdr" firstAttribute="centerX" secondItem="ffQ-CP-30S" secondAttribute="centerX" id="CN2-78-gpQ"/>
+                            <constraint firstItem="p2h-Ev-Q0M" firstAttribute="leading" secondItem="ffQ-CP-30S" secondAttribute="leading" id="MG1-VM-yvR"/>
+                            <constraint firstItem="ffQ-CP-30S" firstAttribute="bottom" secondItem="p2h-Ev-Q0M" secondAttribute="bottom" id="kMA-Tm-kgR"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Vehicle" id="DeD-aw-gdb"/>
+                    <connections>
+                        <outlet property="background" destination="ioo-oZ-Mdr" id="xaO-1S-UF4"/>
+                        <outlet property="collection" destination="p2h-Ev-Q0M" id="sNF-a2-NFW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SDG-BZ-zcg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="993" y="811"/>
+            <point key="canvasLocation" x="992.09302325581393" y="810.51502145922757"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="rrE-LI-DHy">
@@ -299,6 +438,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Standard" width="151" height="86"/>
         <image name="accuntTab" width="29" height="28"/>
         <image name="driveitLogo" width="302" height="408"/>
         <image name="launchBackground" width="414" height="896"/>
@@ -308,11 +448,8 @@
         <namedColor name="MainBG">
             <color red="0.18823529411764706" green="0.30980392156862746" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

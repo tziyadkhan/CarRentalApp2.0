@@ -6,13 +6,16 @@
 //
 
 import UIKit
+import Lottie
 
 class AccountPageController: UIViewController {
 
+    @IBOutlet weak var accountAnimation: LottieAnimationView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        accountAnimation.play()
+        accountAnimation.loopMode = .autoReverse
     }
     
 

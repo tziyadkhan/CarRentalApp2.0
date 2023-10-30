@@ -12,6 +12,14 @@
 		900FB6D22AEF843A00B4BAD3 /* SearchPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900FB6D12AEF843A00B4BAD3 /* SearchPageController.swift */; };
 		900FB6D72AEF846D00B4BAD3 /* AccountPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900FB6D62AEF846D00B4BAD3 /* AccountPageController.swift */; };
 		900FB6DC2AEF8B7800B4BAD3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900FB6DB2AEF8B7800B4BAD3 /* TabBarController.swift */; };
+		900FB6DF2AEF903C00B4BAD3 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 900FB6DE2AEF903C00B4BAD3 /* Realm */; };
+		900FB6E12AEF903C00B4BAD3 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 900FB6E02AEF903C00B4BAD3 /* RealmSwift */; };
+		900FB6E32AEF904D00B4BAD3 /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900FB6E22AEF904D00B4BAD3 /* CarModel.swift */; };
+		900FB6E52AEF90B000B4BAD3 /* RealmFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900FB6E42AEF90B000B4BAD3 /* RealmFunctions.swift */; };
+		900FB6EA2AEF914500B4BAD3 /* CarListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900FB6E82AEF914500B4BAD3 /* CarListCell.swift */; };
+		900FB6EB2AEF914500B4BAD3 /* CarListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 900FB6E92AEF914500B4BAD3 /* CarListCell.xib */; };
+		900FB6EE2AEF9D8D00B4BAD3 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 900FB6ED2AEF9D8D00B4BAD3 /* Lottie */; };
+		900FB6F02AEF9DD100B4BAD3 /* underConstruction.json in Resources */ = {isa = PBXBuildFile; fileRef = 900FB6EF2AEF9DD100B4BAD3 /* underConstruction.json */; };
 		901B39BD2AEF814600279706 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901B39BC2AEF814600279706 /* AppDelegate.swift */; };
 		901B39BF2AEF814600279706 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901B39BE2AEF814600279706 /* SceneDelegate.swift */; };
 		901B39C42AEF814600279706 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 901B39C22AEF814600279706 /* Main.storyboard */; };
@@ -25,6 +33,11 @@
 		900FB6D12AEF843A00B4BAD3 /* SearchPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageController.swift; sourceTree = "<group>"; };
 		900FB6D62AEF846D00B4BAD3 /* AccountPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPageController.swift; sourceTree = "<group>"; };
 		900FB6DB2AEF8B7800B4BAD3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		900FB6E22AEF904D00B4BAD3 /* CarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModel.swift; sourceTree = "<group>"; };
+		900FB6E42AEF90B000B4BAD3 /* RealmFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmFunctions.swift; sourceTree = "<group>"; };
+		900FB6E82AEF914500B4BAD3 /* CarListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListCell.swift; sourceTree = "<group>"; };
+		900FB6E92AEF914500B4BAD3 /* CarListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarListCell.xib; sourceTree = "<group>"; };
+		900FB6EF2AEF9DD100B4BAD3 /* underConstruction.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = underConstruction.json; sourceTree = "<group>"; };
 		901B39B92AEF814600279706 /* CarRentalApp2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarRentalApp2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		901B39BC2AEF814600279706 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		901B39BE2AEF814600279706 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +52,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				900FB6E12AEF903C00B4BAD3 /* RealmSwift in Frameworks */,
+				900FB6DF2AEF903C00B4BAD3 /* Realm in Frameworks */,
+				900FB6EE2AEF9D8D00B4BAD3 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,9 +64,9 @@
 		900FB6CC2AEF840100B4BAD3 /* Home Page */ = {
 			isa = PBXGroup;
 			children = (
-				900FB6D52AEF845B00B4BAD3 /* Account Page */,
-				900FB6D42AEF845200B4BAD3 /* Search Page */,
 				900FB6D32AEF844800B4BAD3 /* Vehicle Page */,
+				900FB6D42AEF845200B4BAD3 /* Search Page */,
+				900FB6D52AEF845B00B4BAD3 /* Account Page */,
 			);
 			path = "Home Page";
 			sourceTree = "<group>";
@@ -90,6 +106,8 @@
 		900FB6D92AEF848700B4BAD3 /* Data Manager */ = {
 			isa = PBXGroup;
 			children = (
+				900FB6E22AEF904D00B4BAD3 /* CarModel.swift */,
+				900FB6E42AEF90B000B4BAD3 /* RealmFunctions.swift */,
 			);
 			path = "Data Manager";
 			sourceTree = "<group>";
@@ -100,6 +118,23 @@
 				900FB6DB2AEF8B7800B4BAD3 /* TabBarController.swift */,
 			);
 			path = "Tab Bar Controller";
+			sourceTree = "<group>";
+		};
+		900FB6E62AEF912300B4BAD3 /* XIB Cells */ = {
+			isa = PBXGroup;
+			children = (
+				900FB6E72AEF912A00B4BAD3 /* CarList */,
+			);
+			path = "XIB Cells";
+			sourceTree = "<group>";
+		};
+		900FB6E72AEF912A00B4BAD3 /* CarList */ = {
+			isa = PBXGroup;
+			children = (
+				900FB6E82AEF914500B4BAD3 /* CarListCell.swift */,
+				900FB6E92AEF914500B4BAD3 /* CarListCell.xib */,
+			);
+			path = CarList;
 			sourceTree = "<group>";
 		};
 		901B39B02AEF814600279706 = {
@@ -121,6 +156,7 @@
 		901B39BB2AEF814600279706 /* CarRentalApp2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				900FB6E62AEF912300B4BAD3 /* XIB Cells */,
 				900FB6D82AEF847D00B4BAD3 /* Login Page */,
 				900FB6CC2AEF840100B4BAD3 /* Home Page */,
 				900FB6D92AEF848700B4BAD3 /* Data Manager */,
@@ -131,6 +167,7 @@
 				901B39C52AEF814700279706 /* Assets.xcassets */,
 				901B39C72AEF814700279706 /* LaunchScreen.storyboard */,
 				901B39CA2AEF814700279706 /* Info.plist */,
+				900FB6EF2AEF9DD100B4BAD3 /* underConstruction.json */,
 			);
 			path = CarRentalApp2.0;
 			sourceTree = "<group>";
@@ -151,6 +188,11 @@
 			dependencies = (
 			);
 			name = CarRentalApp2.0;
+			packageProductDependencies = (
+				900FB6DE2AEF903C00B4BAD3 /* Realm */,
+				900FB6E02AEF903C00B4BAD3 /* RealmSwift */,
+				900FB6ED2AEF9D8D00B4BAD3 /* Lottie */,
+			);
 			productName = CarRentalApp2.0;
 			productReference = 901B39B92AEF814600279706 /* CarRentalApp2.0.app */;
 			productType = "com.apple.product-type.application";
@@ -179,6 +221,10 @@
 				Base,
 			);
 			mainGroup = 901B39B02AEF814600279706;
+			packageReferences = (
+				900FB6DD2AEF903C00B4BAD3 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				900FB6EC2AEF9D8D00B4BAD3 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 901B39BA2AEF814600279706 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -195,6 +241,8 @@
 			files = (
 				901B39C92AEF814700279706 /* LaunchScreen.storyboard in Resources */,
 				901B39C62AEF814700279706 /* Assets.xcassets in Resources */,
+				900FB6F02AEF9DD100B4BAD3 /* underConstruction.json in Resources */,
+				900FB6EB2AEF914500B4BAD3 /* CarListCell.xib in Resources */,
 				901B39C42AEF814600279706 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,7 +254,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				900FB6E32AEF904D00B4BAD3 /* CarModel.swift in Sources */,
 				900FB6D72AEF846D00B4BAD3 /* AccountPageController.swift in Sources */,
+				900FB6EA2AEF914500B4BAD3 /* CarListCell.swift in Sources */,
+				900FB6E52AEF90B000B4BAD3 /* RealmFunctions.swift in Sources */,
 				900FB6CB2AEF83FC00B4BAD3 /* LoginPageController.swift in Sources */,
 				901B39BD2AEF814600279706 /* AppDelegate.swift in Sources */,
 				900FB6D22AEF843A00B4BAD3 /* SearchPageController.swift in Sources */,
@@ -433,6 +484,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		900FB6DD2AEF903C00B4BAD3 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		900FB6EC2AEF9D8D00B4BAD3 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		900FB6DE2AEF903C00B4BAD3 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 900FB6DD2AEF903C00B4BAD3 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		900FB6E02AEF903C00B4BAD3 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 900FB6DD2AEF903C00B4BAD3 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		900FB6ED2AEF9D8D00B4BAD3 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 900FB6EC2AEF9D8D00B4BAD3 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 901B39B12AEF814600279706 /* Project object */;
 }

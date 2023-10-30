@@ -6,24 +6,82 @@
 //
 
 import UIKit
-
+import RealmSwift
 class SearchPageController: UIViewController {
 
+    @IBOutlet weak var searchBackgroundView: UIView!
+    @IBOutlet weak var carListCollection: UICollectionView!
+    let helper = RealmFunctions()
+    var carItems = [CarModel]()
+    let realm = try! Realm()
+    var searching = false
+    var searchedCar = [CarModel]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        helper.getFilePath()
+        layerConfig()
+        fetchItems()
+        carListCollection.register(UINib(nibName: "CarListCell", bundle: nil), forCellWithReuseIdentifier: "CarListCell")
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func search(_ sender: UITextField) {
+        if let searchText = sender.text, !searchText.isEmpty {
+            searching = true
+            searchedCar = carItems.filter { car in
+                if let model = car.model {
+                    return model.lowercased().contains(searchText.lowercased())
+                }
+                return false
+            }
+        } else {
+            searching = false
+            searchedCar.removeAll()
+        }
+        carListCollection.reloadData()
+        }
+}
+extension SearchPageController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if searching {
+            return searchedCar.count
+        } else {
+            return carItems.count
+        }
     }
-    */
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CarListCell", for: indexPath) as! CarListCell
+        if searching {
+            cell.carNameLabel.text = searchedCar[indexPath.row].name
+            cell.carModelLabel.text = searchedCar[indexPath.row].model
+            cell.carImage.image = UIImage(named: searchedCar[indexPath.row].model ?? "emptyCar")
+            cell.carPriceLabel.text = searchedCar[indexPath.row].price
+            cell.carEngineLabel.text = searchedCar[indexPath.row].engine
+            
+        } else {
+            cell.carNameLabel.text = carItems[indexPath.row].name
+            cell.carModelLabel.text = carItems[indexPath.row].model
+            cell.carImage.image = UIImage(named: carItems[indexPath.row].model ?? "emptyCar")
+            cell.carPriceLabel.text = carItems[indexPath.row].price
+            cell.carEngineLabel.text = carItems[indexPath.row].engine
+        }
+        return cell
+    }
+}
 
+//MARK: Functions(searchLayerConfig, Fetching)
+extension SearchPageController {
+    func layerConfig() {
+        searchBackgroundView.layer.cornerRadius = 30
+        searchBackgroundView.layer.masksToBounds = true
+    }
+    
+    func fetchItems() {
+        carItems.removeAll()
+        let data = realm.objects(CarModel.self)
+        carItems.append(contentsOf: data)
+        carListCollection.reloadData()
+    }
 }

@@ -7,19 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		900FB6CB2AEF83FC00B4BAD3 /* LoginPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900FB6CA2AEF83FC00B4BAD3 /* LoginPageController.swift */; };
+		900FB6D02AEF842C00B4BAD3 /* VehiclePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900FB6CF2AEF842C00B4BAD3 /* VehiclePageController.swift */; };
+		900FB6D22AEF843A00B4BAD3 /* SearchPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900FB6D12AEF843A00B4BAD3 /* SearchPageController.swift */; };
+		900FB6D72AEF846D00B4BAD3 /* AccountPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900FB6D62AEF846D00B4BAD3 /* AccountPageController.swift */; };
+		900FB6DC2AEF8B7800B4BAD3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900FB6DB2AEF8B7800B4BAD3 /* TabBarController.swift */; };
 		901B39BD2AEF814600279706 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901B39BC2AEF814600279706 /* AppDelegate.swift */; };
 		901B39BF2AEF814600279706 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901B39BE2AEF814600279706 /* SceneDelegate.swift */; };
-		901B39C12AEF814600279706 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901B39C02AEF814600279706 /* ViewController.swift */; };
 		901B39C42AEF814600279706 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 901B39C22AEF814600279706 /* Main.storyboard */; };
 		901B39C62AEF814700279706 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 901B39C52AEF814700279706 /* Assets.xcassets */; };
 		901B39C92AEF814700279706 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 901B39C72AEF814700279706 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		900FB6CA2AEF83FC00B4BAD3 /* LoginPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageController.swift; sourceTree = "<group>"; };
+		900FB6CF2AEF842C00B4BAD3 /* VehiclePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclePageController.swift; sourceTree = "<group>"; };
+		900FB6D12AEF843A00B4BAD3 /* SearchPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageController.swift; sourceTree = "<group>"; };
+		900FB6D62AEF846D00B4BAD3 /* AccountPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPageController.swift; sourceTree = "<group>"; };
+		900FB6DB2AEF8B7800B4BAD3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		901B39B92AEF814600279706 /* CarRentalApp2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarRentalApp2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		901B39BC2AEF814600279706 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		901B39BE2AEF814600279706 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		901B39C02AEF814600279706 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		901B39C32AEF814600279706 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		901B39C52AEF814700279706 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		901B39C82AEF814700279706 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +45,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		900FB6CC2AEF840100B4BAD3 /* Home Page */ = {
+			isa = PBXGroup;
+			children = (
+				900FB6D52AEF845B00B4BAD3 /* Account Page */,
+				900FB6D42AEF845200B4BAD3 /* Search Page */,
+				900FB6D32AEF844800B4BAD3 /* Vehicle Page */,
+			);
+			path = "Home Page";
+			sourceTree = "<group>";
+		};
+		900FB6D32AEF844800B4BAD3 /* Vehicle Page */ = {
+			isa = PBXGroup;
+			children = (
+				900FB6CF2AEF842C00B4BAD3 /* VehiclePageController.swift */,
+			);
+			path = "Vehicle Page";
+			sourceTree = "<group>";
+		};
+		900FB6D42AEF845200B4BAD3 /* Search Page */ = {
+			isa = PBXGroup;
+			children = (
+				900FB6D12AEF843A00B4BAD3 /* SearchPageController.swift */,
+			);
+			path = "Search Page";
+			sourceTree = "<group>";
+		};
+		900FB6D52AEF845B00B4BAD3 /* Account Page */ = {
+			isa = PBXGroup;
+			children = (
+				900FB6D62AEF846D00B4BAD3 /* AccountPageController.swift */,
+			);
+			path = "Account Page";
+			sourceTree = "<group>";
+		};
+		900FB6D82AEF847D00B4BAD3 /* Login Page */ = {
+			isa = PBXGroup;
+			children = (
+				900FB6CA2AEF83FC00B4BAD3 /* LoginPageController.swift */,
+			);
+			path = "Login Page";
+			sourceTree = "<group>";
+		};
+		900FB6D92AEF848700B4BAD3 /* Data Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Data Manager";
+			sourceTree = "<group>";
+		};
+		900FB6DA2AEF8B5300B4BAD3 /* Tab Bar Controller */ = {
+			isa = PBXGroup;
+			children = (
+				900FB6DB2AEF8B7800B4BAD3 /* TabBarController.swift */,
+			);
+			path = "Tab Bar Controller";
+			sourceTree = "<group>";
+		};
 		901B39B02AEF814600279706 = {
 			isa = PBXGroup;
 			children = (
@@ -56,9 +121,12 @@
 		901B39BB2AEF814600279706 /* CarRentalApp2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				900FB6D82AEF847D00B4BAD3 /* Login Page */,
+				900FB6CC2AEF840100B4BAD3 /* Home Page */,
+				900FB6D92AEF848700B4BAD3 /* Data Manager */,
+				900FB6DA2AEF8B5300B4BAD3 /* Tab Bar Controller */,
 				901B39BC2AEF814600279706 /* AppDelegate.swift */,
 				901B39BE2AEF814600279706 /* SceneDelegate.swift */,
-				901B39C02AEF814600279706 /* ViewController.swift */,
 				901B39C22AEF814600279706 /* Main.storyboard */,
 				901B39C52AEF814700279706 /* Assets.xcassets */,
 				901B39C72AEF814700279706 /* LaunchScreen.storyboard */,
@@ -138,9 +206,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				901B39C12AEF814600279706 /* ViewController.swift in Sources */,
+				900FB6D72AEF846D00B4BAD3 /* AccountPageController.swift in Sources */,
+				900FB6CB2AEF83FC00B4BAD3 /* LoginPageController.swift in Sources */,
 				901B39BD2AEF814600279706 /* AppDelegate.swift in Sources */,
+				900FB6D22AEF843A00B4BAD3 /* SearchPageController.swift in Sources */,
+				900FB6DC2AEF8B7800B4BAD3 /* TabBarController.swift in Sources */,
 				901B39BF2AEF814600279706 /* SceneDelegate.swift in Sources */,
+				900FB6D02AEF842C00B4BAD3 /* VehiclePageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,12 +12,12 @@ class CarCategoryHeader: UICollectionReusableView {
     
     @IBOutlet weak var carCategoryCollection: UICollectionView!
     let helper = RealmFunctions()
-//    var carItems = [CarModel]()
     let realm = try! Realm()
     var categoryCounts = [String: Int]()
     var categorySelectedIndexPath: IndexPath?
-//    var originalCarItems = [CarModel]()
     var didSelectCategoryCallback: ((String) -> Void)?
+    //    var carItems = [CarModel]()
+    //    var originalCarItems = [CarModel]()
     
 }
 
@@ -90,3 +90,4 @@ extension CarCategoryHeader: UICollectionViewDelegate, UICollectionViewDataSourc
         .init(width: 200, height: collectionView.frame.height)
     }
 }
+

@@ -27,6 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
         self.window?.rootViewController = UINavigationController(rootViewController: controller)
         self.window?.makeKeyAndVisible()
+        
     }
     
     func loginPage(windowScene: UIWindowScene) {

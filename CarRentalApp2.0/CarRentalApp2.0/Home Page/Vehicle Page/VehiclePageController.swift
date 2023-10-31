@@ -15,10 +15,10 @@ class VehiclePageController: UIViewController {
     let helper = RealmFunctions()
     var carItems = [CarModel]()
     let realm = try! Realm()
-    let searchController = UISearchController(searchResultsController: nil)
+//    let searchController = UISearchController(searchResultsController: nil)
     var searching = false
     var searchedCar = [CarModel]()
-    var categoryCounts = [String: Int]()
+//    var categoryCounts = [String: Int]()
     var categorySelectedIndexPath: IndexPath?
     var originalCarItems = [CarModel]()
     

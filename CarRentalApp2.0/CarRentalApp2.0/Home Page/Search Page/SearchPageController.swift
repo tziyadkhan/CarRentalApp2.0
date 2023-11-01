@@ -16,6 +16,7 @@ class SearchPageController: UIViewController {
     let realm = try! Realm()
     var searching = false
     var searchedCar = [CarModel]()
+    var backupCars = [CarModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +24,13 @@ class SearchPageController: UIViewController {
         layerConfig()
         fetchItems()
         carListCollection.register(UINib(nibName: "CarListCell", bundle: nil), forCellWithReuseIdentifier: "CarListCell")
+        backupCars = carItems
     }
     
     @IBAction func search(_ sender: UITextField) {
         if let searchText = sender.text, !searchText.isEmpty {
             searching = true
-            searchedCar = carItems.filter { car in
+            carItems = carItems.filter { car in
                 if let model = car.model {
                     return model.lowercased().contains(searchText.lowercased())
                 }
@@ -36,34 +38,36 @@ class SearchPageController: UIViewController {
             }
         } else {
             searching = false
-            searchedCar.removeAll()
+            carItems.removeAll()
+            carItems = backupCars
+            
         }
         carListCollection.reloadData()
         }
 }
 extension SearchPageController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if searching {
-            return searchedCar.count
-        } else {
+//        if searching {
+//            return searchedCar.count
+//        } else {
             return carItems.count
-        }
+//        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CarListCell", for: indexPath) as! CarListCell
-        if searching {
-            cell.addItemToCell(name: searchedCar[indexPath.row].name,
-                               model: searchedCar[indexPath.row].model,
-                               price: searchedCar[indexPath.row].price,
-                               engine: searchedCar[indexPath.row].engine)
-            
-        } else {
+//        if searching {
+//            cell.addItemToCell(name: searchedCar[indexPath.row].name,
+//                               model: searchedCar[indexPath.row].model,
+//                               price: searchedCar[indexPath.row].price,
+//                               engine: searchedCar[indexPath.row].engine)
+//            
+//        } else {
             cell.addItemToCell(name: carItems[indexPath.row].name,
                                model: carItems[indexPath.row].model,
                                price: carItems[indexPath.row].price,
                                engine: carItems[indexPath.row].engine)
-        }
+//        }
         return cell
     }
     

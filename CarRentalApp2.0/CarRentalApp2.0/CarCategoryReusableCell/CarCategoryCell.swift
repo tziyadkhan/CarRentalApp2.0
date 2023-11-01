@@ -17,6 +17,18 @@ class CarCategoryCell: UICollectionViewCell {
         super.awakeFromNib()
         background.layer.cornerRadius = 20
     }
+    
+    func selectItem() {
+        background.backgroundColor = .mainBG
+        carCategoryName.textColor = .white
+        carCategoryCount.textColor = .white
+    }
+    
+    func deSelectItem() {
+        background.backgroundColor = .white
+        carCategoryName.textColor = .black
+        carCategoryCount.textColor = .lightGray
+    }
 }
 
 

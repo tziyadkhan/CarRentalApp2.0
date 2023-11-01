@@ -38,14 +38,10 @@ extension CarCategoryHeader: UICollectionViewDelegate, UICollectionViewDataSourc
         
         if indexPath == categorySelectedIndexPath {
             // Apply selected appearance
-            cell.background.backgroundColor = .mainBG
-            cell.carCategoryName.textColor = .white
-            cell.carCategoryCount.textColor = .white
+            cell.selectItem()
         } else {
             // Apply default appearance
-            cell.background.backgroundColor = .white
-            cell.carCategoryName.textColor = .black
-            cell.carCategoryCount.textColor = .lightGray
+            cell.deSelectItem()
         }
         
         if let count = categoryCounts[category.rawValue] {
@@ -53,9 +49,7 @@ extension CarCategoryHeader: UICollectionViewDelegate, UICollectionViewDataSourc
         } else {
             cell.carCategoryCount.text = "0"
         }
-        
         return cell
-
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

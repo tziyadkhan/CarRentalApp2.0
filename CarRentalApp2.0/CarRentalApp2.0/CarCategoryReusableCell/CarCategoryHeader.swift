@@ -38,7 +38,7 @@ extension CarCategoryHeader: UICollectionViewDelegate, UICollectionViewDataSourc
         
         if indexPath == categorySelectedIndexPath {
             // Apply selected appearance
-            cell.background.backgroundColor = .blue
+            cell.background.backgroundColor = .mainBG
             cell.carCategoryName.textColor = .white
             cell.carCategoryCount.textColor = .white
         } else {
@@ -74,7 +74,7 @@ extension CarCategoryHeader: UICollectionViewDelegate, UICollectionViewDataSourc
         
         if let selectedCell = collectionView.cellForItem(at: indexPath) as? CarCategoryCell {
             // Change the elements' colors of the newly selected cell
-            selectedCell.background.backgroundColor = .blue
+            selectedCell.background.backgroundColor = .mainBG
             selectedCell.carCategoryName.textColor = .white
             selectedCell.carCategoryCount.textColor = .white
         }

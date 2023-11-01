@@ -66,18 +66,16 @@ extension VehiclePageController: UICollectionViewDataSource, UICollectionViewDel
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CarListCell", for: indexPath) as! CarListCell
         
         if searching {
-            cell.carNameLabel.text = searchedCar[indexPath.row].name
-            cell.carModelLabel.text = searchedCar[indexPath.row].model
-            cell.carImage.image = UIImage(named: searchedCar[indexPath.row].model ?? "emptyCar")
-            cell.carPriceLabel.text = searchedCar[indexPath.row].price
-            cell.carEngineLabel.text = searchedCar[indexPath.row].engine
+            cell.addItemToCell(name: searchedCar[indexPath.row].name,
+                               model: searchedCar[indexPath.row].model,
+                               price: searchedCar[indexPath.row].price,
+                               engine: searchedCar[indexPath.row].engine)
             
         } else {
-            cell.carNameLabel.text = carItems[indexPath.item].name
-            cell.carModelLabel.text = carItems[indexPath.item].model
-            cell.carImage.image = UIImage(named: carItems[indexPath.item].model ?? "emptyCar")
-            cell.carEngineLabel.text = carItems[indexPath.item].engine
-            cell.carPriceLabel.text = carItems[indexPath.item].price
+            cell.addItemToCell(name: carItems[indexPath.row].name,
+                               model: carItems[indexPath.row].model,
+                               price: carItems[indexPath.row].price,
+                               engine: carItems[indexPath.row].engine)
         }
         return cell
 

@@ -20,6 +20,14 @@ class CarListCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         background.layer.cornerRadius = 20
+        
+    }
+    func addItemToCell(name: String?, model: String?, price: String?, engine: String?) {
+        carImage.image = UIImage(named: model ?? "emptyCar")
+        carNameLabel.text = name
+        carModelLabel.text = model
+        carPriceLabel.text = price
+        carEngineLabel.text = engine
     }
 
 }

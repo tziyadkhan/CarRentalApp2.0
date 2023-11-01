@@ -69,15 +69,24 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="360" id="Ito-iv-OPm"/>
+                            <constraint firstAttribute="width" constant="360" id="Pxm-y6-JPQ"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="f6I-g7-zr5" secondAttribute="trailing" id="Oka-YD-KSg"/>
-                <constraint firstAttribute="bottom" secondItem="f6I-g7-zr5" secondAttribute="bottom" id="eNv-7G-cVE"/>
-                <constraint firstItem="f6I-g7-zr5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="f7u-I2-s9k"/>
-                <constraint firstItem="f6I-g7-zr5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="fVg-hX-lpW"/>
+                <constraint firstItem="f6I-g7-zr5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="3bH-10-5q9"/>
+                <constraint firstAttribute="bottom" secondItem="f6I-g7-zr5" secondAttribute="bottom" id="Lt0-cY-rMa"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="f6I-g7-zr5" secondAttribute="trailing" id="bhb-29-PeL"/>
+                <constraint firstItem="f6I-g7-zr5" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="h7q-vm-Pwo"/>
             </constraints>
             <connections>
                 <outlet property="background" destination="f6I-g7-zr5" id="Hs4-hj-BLB"/>

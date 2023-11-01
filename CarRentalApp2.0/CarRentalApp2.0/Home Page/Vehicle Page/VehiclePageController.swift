@@ -52,30 +52,16 @@ class VehiclePageController: UIViewController {
 }
 extension VehiclePageController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-//        if searching {
-//            return searchedCar.count
-//        } else {
             return carItems.count
-//        }
     }
     
     //Cell configuration
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CarListCell", for: indexPath) as! CarListCell
-        
-//        if searching {
-//            cell.addItemToCell(name: searchedCar[indexPath.row].name,
-//                               model: searchedCar[indexPath.row].model,
-//                               price: searchedCar[indexPath.row].price,
-//                               engine: searchedCar[indexPath.row].engine)
-//            
-//        } else {
             cell.addItemToCell(name: carItems[indexPath.row].name,
                                model: carItems[indexPath.row].model,
                                price: carItems[indexPath.row].price,
                                engine: carItems[indexPath.row].engine)
-//        }
         return cell
 
     }
@@ -85,18 +71,13 @@ extension VehiclePageController: UICollectionViewDataSource, UICollectionViewDel
     }
     
     // Header configuration
-    
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "\(CarCategoryHeader.self)", for: indexPath) as! CarCategoryHeader
-        //        header.carItems = carItems
-        //        header.originalCarItems = carItems
         header.didSelectCategoryCallback = { category in
             let filteredCars = self.originalCarItems.filter {$0.category == category}
             self.carItems = filteredCars
             self.collection.reloadData()
-            
         }
-        //        header.backgroundColor = .orange
         return header
     }
 }

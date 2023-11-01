@@ -40,34 +40,21 @@ class SearchPageController: UIViewController {
             searching = false
             carItems.removeAll()
             carItems = backupCars
-            
         }
         carListCollection.reloadData()
         }
 }
 extension SearchPageController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        if searching {
-//            return searchedCar.count
-//        } else {
             return carItems.count
-//        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CarListCell", for: indexPath) as! CarListCell
-//        if searching {
-//            cell.addItemToCell(name: searchedCar[indexPath.row].name,
-//                               model: searchedCar[indexPath.row].model,
-//                               price: searchedCar[indexPath.row].price,
-//                               engine: searchedCar[indexPath.row].engine)
-//            
-//        } else {
             cell.addItemToCell(name: carItems[indexPath.row].name,
                                model: carItems[indexPath.row].model,
                                price: carItems[indexPath.row].price,
                                engine: carItems[indexPath.row].engine)
-//        }
         return cell
     }
     
